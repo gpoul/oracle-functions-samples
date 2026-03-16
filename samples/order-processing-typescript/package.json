@@ -1,0 +1,24 @@
+{
+	"name": "order-processing",
+	"version": "1.0.0",
+	"description": "Order processing example function",
+	"main": "func.js",
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.992.0",
+		"@fnproject/fdk": ">=0.0.88",
+		"oci-common": "^2.125.2",
+		"oci-objectstorage": "^2.125.2"
+	},
+	"devDependencies": {
+		"@types/node": "^25.2.3",
+		"esbuild": "^0.27.3",
+		"esbuild-plugin-tsc": "^0.5.0",
+		"npm-dts": "^1.3.13"
+	},
+	"scripts": {
+		"build": "esbuild --sourcemap=inline --bundle func.ts --minify --platform=node --outdir=dist",
+		"deploy": "fn -v deploy -app order-processing-app",
+		"test": "echo -n '{\"orderId\": \"43\", \"price\": 43.99, \"product\": \"Coffee Beans\"}' | fn invoke order-processing-app order-processing",
+		"dts": "./node_modules/.bin/npm-dts generate --entry func.ts"
+	}
+}

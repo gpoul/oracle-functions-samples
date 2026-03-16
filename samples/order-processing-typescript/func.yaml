@@ -1,0 +1,14 @@
+schema_version: 20180708
+name: order-processing
+version: 0.0.36
+runtime: docker
+build_image: fnproject/node:20-dev
+run_image: fnproject/node:20
+entrypoint: node --enable-source-maps func.ts
+timeout: 300
+config:
+  AWS_ACCESS_KEY_ID: undefined
+  AWS_SECRET_ACCESS_KEY: undefined
+  OS_NAMESPACE: MyNamespace
+  TARGET_BUCKET: order-processing
+  TARGET_API: OCI

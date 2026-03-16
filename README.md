@@ -73,6 +73,7 @@ This repository provides examples demonstrating how to use Oracle Functions.
 |------------------------------------------------------|:------:|:----:|
 | Serverless SaaS Extensions using Oracle Functions, API Gateway and VBCS | [repo](https://github.com/oracle/cloud-asset-fusion-serverless-vbcs-sample) | [blog](https://www.ateam-oracle.com/the-cloud-native-approach-to-extending-your-saas-applications)
 | Function that demonstrates connectivity between Oracle SaaS applications with OIC | [sample](./samples/oci-oic-hcm-object-upload)|
+| TypeScript function migrated from AWS Lambda to OCI Functions | [sample](./samples/order-processing-typescript)|
 
 ## Documentation
 
